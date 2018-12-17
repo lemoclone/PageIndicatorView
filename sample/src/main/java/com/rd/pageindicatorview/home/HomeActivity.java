@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import com.rd.PageIndicatorView;
+import com.rd.animation.type.AnimationType;
 import com.rd.pageindicatorview.base.BaseActivity;
 import com.rd.pageindicatorview.customize.CustomizeActivity;
 import com.rd.pageindicatorview.data.Customization;
@@ -30,6 +31,7 @@ public class HomeActivity extends BaseActivity {
 
         initToolbar();
         initViews();
+        updateIndicator();
     }
 
     @Override
@@ -97,8 +99,9 @@ public class HomeActivity extends BaseActivity {
         pageIndicatorView.setAnimationType(customization.getAnimationType());
         pageIndicatorView.setOrientation(customization.getOrientation());
         pageIndicatorView.setRtlMode(customization.getRtlMode());
-        pageIndicatorView.setInteractiveAnimation(customization.isInteractiveAnimation());
         pageIndicatorView.setAutoVisibility(customization.isAutoVisibility());
         pageIndicatorView.setFadeOnIdle(customization.isFadeOnIdle());
+        pageIndicatorView.setInteractiveAnimation(true);
+        pageIndicatorView.setAnimationType(AnimationType.SLIDE);
     }
 }

@@ -2,6 +2,8 @@ package com.rd.draw.drawer.type;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.RectF;
+
 import androidx.annotation.NonNull;
 import com.rd.animation.data.Value;
 import com.rd.animation.data.type.ColorAnimationValue;
@@ -49,6 +51,10 @@ public class ColorDrawer extends BaseDrawer {
         }
 
         paint.setColor(color);
-        canvas.drawCircle(coordinateX, coordinateY, radius, paint);
+
+        RectF rectF = new RectF(coordinateX-8,coordinateY-2,coordinateX+8,coordinateY+2);
+
+        canvas.drawRoundRect(rectF,2,2,paint);
+        //canvas.drawCircle(coordinateX, coordinateY, radius, paint);
     }
 }

@@ -2,9 +2,13 @@ package com.rd.draw.drawer.type;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.RectF;
+
 import androidx.annotation.NonNull;
 import com.rd.animation.type.AnimationType;
 import com.rd.draw.data.Indicator;
+import com.rd.utils.CustomerSliderIndicator;
 
 public class BasicDrawer extends BaseDrawer {
 
@@ -56,6 +60,9 @@ public class BasicDrawer extends BaseDrawer {
         }
 
         paint.setColor(color);
-        canvas.drawCircle(coordinateX, coordinateY, radius, paint);
+
+        CustomerSliderIndicator customerSliderIndicator = CustomerSliderIndicator.getCustomerSliderIndicator(coordinateX,coordinateY);
+        canvas.drawRoundRect(customerSliderIndicator.getRectF(),customerSliderIndicator.getRadius(),customerSliderIndicator.getRadius(),paint);
+        //canvas.drawCircle(coordinateX, coordinateY, radius, paint);
     }
 }

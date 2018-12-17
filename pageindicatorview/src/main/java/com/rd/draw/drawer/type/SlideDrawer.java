@@ -2,11 +2,15 @@ package com.rd.draw.drawer.type;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.RectF;
+
 import androidx.annotation.NonNull;
 import com.rd.animation.data.Value;
 import com.rd.animation.data.type.SlideAnimationValue;
 import com.rd.draw.data.Indicator;
 import com.rd.draw.data.Orientation;
+import com.rd.utils.CustomerSliderIndicator;
 
 public class SlideDrawer extends BaseDrawer {
 
@@ -31,13 +35,22 @@ public class SlideDrawer extends BaseDrawer {
         int radius = indicator.getRadius();
 
         paint.setColor(unselectedColor);
-        canvas.drawCircle(coordinateX, coordinateY, radius, paint);
+        //canvas.drawCircle(coordinateX, coordinateY, radius, paint);
+        CustomerSliderIndicator customerSliderIndicator = CustomerSliderIndicator.getCustomerSliderIndicator(coordinateX,coordinateY);
+        canvas.drawRoundRect(customerSliderIndicator.getRectF(),customerSliderIndicator.getRadius(),customerSliderIndicator.getRadius(),paint);
 
         paint.setColor(selectedColor);
         if (indicator.getOrientation() == Orientation.HORIZONTAL) {
-            canvas.drawCircle(coordinate, coordinateY, radius, paint);
+            //canvas.drawCircle(coordinate, coordinateY, radius, paint);
+            RectF rectF = customerSliderIndicator.getRectF();
+            rectF.offset(coordinate-coordinateX,0);
+            RectF recFNew = new RectF(rectF);
+            canvas.drawRoundRect(recFNew,customerSliderIndicator.getRadius(),customerSliderIndicator.getRadius(),paint);
+
         } else {
-            canvas.drawCircle(coordinateX, coordinate, radius, paint);
+            //canvas.drawCircle(coordinateX, coordinate, radius, paint);
+            //canvas.drawRoundRect(customerSliderIndicator.getRectF(),customerSliderIndicator.getRadius(),customerSliderIndicator.getRadius(),paint);
+
         }
     }
 }
