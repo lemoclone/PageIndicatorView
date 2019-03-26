@@ -38,6 +38,7 @@
             <enum name="drop" value="7" />
             <enum name="swap" value="8" />
             <enum name="scale_down" value="9" />
+            <enum name="circle_slide" value="10" />
         </attr>
         <attr name="piv_rtl_mode">
             <enum name="on" value="0" />

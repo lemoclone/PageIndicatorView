@@ -61,8 +61,11 @@ public class BasicDrawer extends BaseDrawer {
 
         paint.setColor(color);
 
-        CustomerSliderIndicator customerSliderIndicator = CustomerSliderIndicator.getCustomerSliderIndicator(coordinateX,coordinateY);
-        canvas.drawRoundRect(customerSliderIndicator.getRectF(),customerSliderIndicator.getRadius(),customerSliderIndicator.getRadius(),paint);
-        //canvas.drawCircle(coordinateX, coordinateY, radius, paint);
+        if(animationType == AnimationType.CIRCLE_SLIDE){
+            canvas.drawCircle(coordinateX, coordinateY, radius, paint);
+        }else {
+            CustomerSliderIndicator customerSliderIndicator = CustomerSliderIndicator.getCustomerSliderIndicator(coordinateX,coordinateY);
+            canvas.drawRoundRect(customerSliderIndicator.getRectF(),customerSliderIndicator.getRadius(),customerSliderIndicator.getRadius(),paint);
+        }
     }
 }

@@ -96,12 +96,12 @@ public class HomeActivity extends BaseActivity {
             return;
         }
 
-        pageIndicatorView.setAnimationType(customization.getAnimationType());
+//        pageIndicatorView.setAnimationType(customization.getAnimationType());
         pageIndicatorView.setOrientation(customization.getOrientation());
         pageIndicatorView.setRtlMode(customization.getRtlMode());
         pageIndicatorView.setAutoVisibility(customization.isAutoVisibility());
         pageIndicatorView.setFadeOnIdle(customization.isFadeOnIdle());
         pageIndicatorView.setInteractiveAnimation(true);
-        pageIndicatorView.setAnimationType(AnimationType.SLIDE);
+//        pageIndicatorView.setAnimationType(AnimationType.CIRCLE_SLIDE);
     }
 }

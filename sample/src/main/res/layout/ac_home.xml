@@ -26,11 +26,15 @@
     <com.rd.PageIndicatorView
         android:id="@+id/pageIndicatorView"
         app:piv_viewPager="@id/viewPager"
+        app:piv_animationType = "circle_slide"
+        app:piv_radius = "4dp"
+        app:piv_unselectedColor = "@color/gray_901"
+        app:piv_selectedColor = "@color/black_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:padding="10dp"
+        android:padding="8dp"
         android:layout_marginBottom="48dp" />
 
     <FrameLayout

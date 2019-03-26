@@ -132,6 +132,10 @@ public class DrawController {
             case SCALE_DOWN:
                 drawer.drawScaleDown(canvas, value);
                 break;
+
+            case CIRCLE_SLIDE:
+                drawer.drawCircleSlide(canvas, value);
+                break;
         }
     }
 }
