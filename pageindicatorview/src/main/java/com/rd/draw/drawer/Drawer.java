@@ -19,6 +19,7 @@ public class Drawer {
     private DropDrawer dropDrawer;
     private SwapDrawer swapDrawer;
     private ScaleDownDrawer scaleDownDrawer;
+    private CircleSlideDrawer circleSlideDrawer;
 
     private int position;
     private int coordinateX;
@@ -39,6 +40,7 @@ public class Drawer {
         dropDrawer = new DropDrawer(paint, indicator);
         swapDrawer = new SwapDrawer(paint, indicator);
         scaleDownDrawer = new ScaleDownDrawer(paint, indicator);
+        circleSlideDrawer = new CircleSlideDrawer(paint, indicator);
     }
 
     public void setup(int position, int coordinateX, int coordinateY) {
@@ -104,6 +106,12 @@ public class Drawer {
     public void drawScaleDown(@NonNull Canvas canvas, @NonNull Value value) {
         if (scaleDownDrawer != null) {
             scaleDownDrawer.draw(canvas, value, position, coordinateX, coordinateY);
+        }
+    }
+
+    public void drawCircleSlide(@NonNull Canvas canvas, @NonNull Value value) {
+        if (circleSlideDrawer != null) {
+            circleSlideDrawer.draw(canvas, value, coordinateX, coordinateY);
         }
     }
 }

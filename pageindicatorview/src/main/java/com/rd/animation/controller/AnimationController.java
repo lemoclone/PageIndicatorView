@@ -66,6 +66,7 @@ public class AnimationController {
                 break;
 
             case SLIDE:
+            case CIRCLE_SLIDE:
                 slideAnimation();
                 break;
 
@@ -83,7 +84,6 @@ public class AnimationController {
 
             case SCALE_DOWN:
                 scaleDownAnimation();
-                break;
         }
     }
 

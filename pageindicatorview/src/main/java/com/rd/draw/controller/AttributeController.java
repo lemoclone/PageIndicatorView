@@ -163,6 +163,8 @@ public class AttributeController {
                 return AnimationType.SWAP;
             case 9:
                 return AnimationType.SCALE_DOWN;
+            case 10:
+                return AnimationType.CIRCLE_SLIDE;
         }
 
         return AnimationType.NONE;

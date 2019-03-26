@@ -4,6 +4,7 @@
     <color name="transparent">#00000000</color>
 
     <color name="black">#000000</color>
+    <color name="black_1">#333333</color>
     <item name="black_10_transparent" type="color">#1A000000</item>
 
     <color name="white">#ffffff</color>
@@ -17,7 +18,8 @@
     <color name="gray_600">#757575</color>
     <color name="gray_700">#616161</color>
     <color name="gray_800">#424242</color>
-    <color name="gray_900">#212121</color>
+    <color name="gray_900">#458500</color>
+    <color name="gray_901">#cccccc</color>
 
     <color name="blue_50">#E3F2FD</color>
     <color name="blue_100">#BBDEFB</color>
